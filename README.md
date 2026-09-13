@@ -1,4 +1,4 @@
-## Hi there 👋
+## Hi there 🐸
 
 <!--
 **chrislafave/chrislafave** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -24,7 +24,7 @@ Current, self-directed bench work. Full write-ups, schematics, firmware source, 
 
 ## Project 1 — ESP32-S3 Four-Channel Bench Data Logger (2025 – Present)
 
-**Problem.** Needed long-duration logging of low-frequency analog signals on the bench (thermal drift, supply rail sag, sensor output) without tying up an oscilloscope, and wanted results viewable from another room.
+**Problem.** I needed long-duration logging of low-frequency analog signals on the bench (thermal drift, supply rail sag, sensor output) without tying up an oscilloscope, and wanted results viewable from another room.  🤔
 
 **Approach.**
 - Analog front end: ADS1115 16-bit ADC, four single-ended channels, RC anti-alias filtering, protective input clamping.
@@ -42,17 +42,17 @@ Current, self-directed bench work. Full write-ups, schematics, firmware source, 
 
 **What I learned.** The first board revision shared a ground pour and placed the switching regulator too close to the ADC input traces — the noise floor was about four times worse. Relocating the regulator and reworking the analog return path fixed it.
 
-**Artifacts.** Schematic and layout (KiCad), firmware source, bring-up checklist, test procedure and results, photos of both board revisions.
+**My project files.** Schematic and layout (KiCad), firmware source, bring-up checklist, test procedure and results, photos of both board revisions.
 
 ---
 
 ## Project 2 — 2.4 GHz Antenna Selection and Matching Study (2025)
 
-**Problem.** Which antenna option actually performs best on a small ESP32 board, and how much does matching matter in practice?
+**Problem.** Which antenna option actually performs best on a small ESP32 board, and how much does matching matter in practice?  🤔
 
 **Approach.** Built one target board with three populated antenna options (PCB trace, ceramic chip, external whip via U.FL/SMA). Measured return loss on each, tuned a pi-network match on the chip antenna, then ran repeatable range tests: fixed AP location, marked distances, 500 pings per point, logging RSSI and packet loss.
 
-**Results.** Matching improved usable range by roughly 35% over the untuned chip antenna; the external whip outperformed both PCB options by a further margin, at the cost of an extra connector and assembly step.
+**Results.** Matching improved usable range by roughly 35% over the untuned chip antenna; the external whip outperformed both PCB options by a further margin, at the cost of an extra connector (what insertion loss? Wut?).
 
 **What I learned.** The mechanical and BOM cost of a connector is a real trade-off against RF gain — the "best" antenna depends on the enclosure and product volume, not just S11. Fixture repeatability dominated the measurement until positions were clamped and marked.
 
@@ -62,7 +62,7 @@ Current, self-directed bench work. Full write-ups, schematics, firmware source, 
 
 ## Project 3 — Linear Bench Supply Repair and Characterization (2024)
 
-**Problem.** A dead 0–30 V linear bench supply, no output, no documentation beyond a service manual.
+**Problem.** A dead 0–30 V linear bench supply, no output, no documentation beyond a service manual.  🤔
 
 **Approach.** Traced from the output back through the regulation loop, isolated a shorted pass transistor and two out-of-spec filter capacitors, sourced replacements, and reworked the board. Characterized the repaired unit rather than assuming it was fine.
 
