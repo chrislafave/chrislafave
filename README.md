@@ -40,7 +40,7 @@ Current, self-directed bench work. Full write-ups, schematics, firmware source, 
 | Noise floor | Shorted input, 10,000 samples | 1.2 LSB RMS |
 | Wi-Fi dropout recovery | Forced AP power cycle | Reconnect and resume logging in under 8 s, no sample loss to SD |
 
-**What I learned.** The first board revision shared a ground pour and placed the switching regulator too close to the ADC input traces — the noise floor was about four times worse. Relocating the regulator and reworking the analog return path fixed it. Both revisions are kept in the repo to show the before/after measurement.
+**What I learned.** The first board revision shared a ground pour and placed the switching regulator too close to the ADC input traces — the noise floor was about four times worse. Relocating the regulator and reworking the analog return path fixed it.
 
 **Artifacts.** Schematic and layout (KiCad), firmware source, bring-up checklist, test procedure and results, photos of both board revisions.
 
